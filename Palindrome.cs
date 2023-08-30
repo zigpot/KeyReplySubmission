@@ -1,7 +1,7 @@
 class Palindrome{
   public static string longestPalindrome(string s){
     for (int window = s.Length; window > 1; window--){
-      for(int offset = 0; offset < window - s.Length; offset++){
+      for(int offset = 0; offset <= s.Length - window; offset++){
         if(isPalindrome(s.Substring(offset, window))){
           return s.Substring(offset, window);
         }
